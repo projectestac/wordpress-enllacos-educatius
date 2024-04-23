@@ -75,6 +75,7 @@ class XTEC_Widget extends WP_Widget {
     public function widget($args, $instance): void {
 
         extract($args);
+
         // Saved widget options
         $title = $instance['title'];
 
@@ -100,17 +101,24 @@ class XTEC_Widget extends WP_Widget {
 
         // Display information
         echo $before_widget;
+
         if (!empty($title)) {
             echo $before_title . $title . $after_title;
         }
-        echo "<div class='grid-icon'>";
+
+        echo '<div class="grid-icon">';
         foreach ($this->recursos as $idRecurs => $nomRecurs) {
             $idRecurs = $instance[$idRecurs] ?? '';
             if (!empty($idRecurs)) {
-                echo "<a target='_blank' title=\"" . $nomRecurs['nom'] . "\" href=\"" . esc_url($nomRecurs['url']) . "\"><img alt=\"Logotip de " . $nomRecurs['nom'] . "\" style=\"width:60px;\" src=\"" . plugins_url('images/' . $nomRecurs['img'], __FILE__) . "\"></a>";
+                echo '<a target="_blank" title="' . $nomRecurs['nom'] . '" href="' . esc_url($nomRecurs['url']) . '">
+                          <img style="width:60px;"
+                               alt="Logotip de ' . $nomRecurs['nom'] . '"
+                               src="' . plugins_url('images/' . $nomRecurs['img'], __FILE__) . '">
+                      </a>';
             }
         }
         echo '</div>';
+
         echo $after_widget;
     }
 
@@ -128,17 +136,31 @@ class XTEC_Widget extends WP_Widget {
         ?>
         <p>
             <label for="<?php echo $this->get_field_id('title'); ?>">Títol:</label>
-            <input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo esc_attr($title); ?>">
+            <input class="widefat"
+                   id="<?php echo $this->get_field_id('title'); ?>"
+                   name="<?php echo $this->get_field_name('title'); ?>"
+                   type="text"
+                   value="<?php echo esc_attr($title); ?>" />
         </p>
         <label>Tria enllaços:</label><br>
         <?php foreach ($this->recursos as $idRecurs => $nomRecurs) { ?>
             <p>
-                <input class="checkbox" type="checkbox" <?php echo ($instance[$idRecurs] == 'on') ? 'checked' : ''; ?> id="<?php echo $this->get_field_id($idRecurs); ?>" name="<?php echo $this->get_field_name($idRecurs); ?>
-                <label for="<?php echo $this->get_field_id($idRecurs); ?>"><?php echo '<strong>' . $nomRecurs['nom'] . '</strong> (' . $nomRecurs['desc'] . ") <a target='_blank' href=\"" . esc_url($nomRecurs['url']) . "\">>></a>"; ?>
-                    <br>
+                <input class="checkbox"
+                       type="checkbox"
+                       id="<?= $this->get_field_id($idRecurs) ?>"
+                       name="<?= $this->get_field_name($idRecurs) ?>"
+                       <?= ($instance[$idRecurs] === 'on') ? 'checked' : '' ?> />
+                <label for="<?= $this->get_field_id($idRecurs) ?>">
+                    <strong><?= $nomRecurs['nom'] ?></strong> (<?= $nomRecurs['desc']?>)
+                    <a target="_blank" href="<?= esc_url($nomRecurs['url']) ?>">>></a>
+                    <br/>
                     <?php if (!in_array($idRecurs, $this->recursosXtec, true)) { ?>
                         Adreça web:
-                        <input class="widefat" id="<?php echo $this->get_field_id($idRecurs); ?>_url" name="<?php echo $this->get_field_name($idRecurs . '_url'); ?>" type="text" value="<?php echo esc_attr($nomRecurs['url']); ?>">
+                        <input class="widefat"
+                               id="<?= $this->get_field_id($idRecurs) ?>_url"
+                               name="<?= $this->get_field_name($idRecurs . '_url') ?>"
+                               type="text"
+                               value="<?= esc_attr($nomRecurs['url']) ?>">
                     <?php } ?>
                 </label>
             </p>
@@ -163,5 +185,7 @@ class XTEC_Widget extends WP_Widget {
         $instance['classroom_url'] = (!empty($new_instance['classroom_url'])) ? sanitize_text_field($new_instance['classroom_url']) : 'https://classroom.google.com/';
 
         return $instance;
+
     }
+
 }
