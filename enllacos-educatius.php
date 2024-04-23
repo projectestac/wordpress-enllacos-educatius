@@ -106,7 +106,7 @@ class XTEC_Widget extends WP_Widget {
             echo $before_title . $title . $after_title;
         }
 
-        echo '<div class="grid-icon">';
+        echo '<div style="background-color:white; margin-top:0; padding:5px 5px 5px 10px;">';
         foreach ($this->recursos as $idRecurs => $nomRecurs) {
             $idRecurs = $instance[$idRecurs] ?? '';
             if (!empty($idRecurs)) {
