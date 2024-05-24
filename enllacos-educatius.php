@@ -25,7 +25,7 @@ class XTEC_Widget extends WP_Widget {
         'ateneu' => ['nom' => 'Ateneu', 'url' => 'https://ateneu.xtec.cat/', 'img' => 'ateneu-icon.png', 'desc' => 'Materials i recursos per la formació'],
         'alexandria' => ['nom' => 'Alexandria', 'url' => 'https://alexandria.xtec.cat', 'img' => 'alexandria-icon.png', 'desc' => 'Cursos moodle i activitats PDI per descarregar'],
         'linkat' => ['nom' => 'Linkat', 'url' => 'http://linkat.xtec.cat/', 'img' => 'linkat-icon.png', 'desc' => 'Linux pels centres educatius'],
-        'jclic' => ['nom' => 'JClic', 'url' => 'https://clic.xtec.cat/ca/jclic/', 'img' => 'jclic-icon.png', 'desc' => 'Activitats jClic'],
+        'jclic' => ['nom' => 'JClic', 'url' => 'https://projectes.xtec.cat/clic', 'img' => 'jclic-icon.png', 'desc' => 'Activitats jClic'],
         'merli' => ['nom' => 'Merlí', 'url' => 'http://merli.xtec.cat', 'img' => 'merli-icon.png', 'desc' => 'Catàleg de recursos XTEC'],
         'arc' => ['nom' => 'ARC', 'url' => 'https://apliense.xtec.cat/arc/', 'img' => 'arc-icon.png', 'desc' => 'Aplicació de recursos al Currículum'],
         'odissea' => ['nom' => 'Odissea', 'url' => 'https://odissea.xtec.cat', 'img' => 'odissea-icon.png', 'desc' => 'Entorn virtual de formació per a docents'],
