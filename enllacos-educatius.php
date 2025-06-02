@@ -66,7 +66,7 @@ class XTEC_Widget extends WP_Widget {
 
         $this->recursos['moodle']['url'] = get_home_url() . '/moodle';
         $this->recursos['ampa']['url'] = get_home_url() . '/ampa';
-        $this->recursos['epergam']['url'] = 'https://aplicacions.ensenyament.gencat.cat/epergam/web/biblioteca.jsp?codi=' . SCHOOL_CODE;
+        $this->recursos['epergam']['url'] = 'https://aplicacions.gestioeducativa.gencat.cat/epergam/web/biblioteca.jsp?codi=' . SCHOOL_CODE;
 
     }
 
