@@ -149,7 +149,7 @@ class XTEC_Widget extends WP_Widget {
                        type="checkbox"
                        id="<?= $this->get_field_id($idRecurs) ?>"
                        name="<?= $this->get_field_name($idRecurs) ?>"
-                       <?= ($instance[$idRecurs] === 'on') ? 'checked' : '' ?> />
+                       <?= (isset($instance[$idRecurs]) && $instance[$idRecurs] === 'on') ? 'checked' : '' ?> />
                 <label for="<?= $this->get_field_id($idRecurs) ?>">
                     <strong><?= $nomRecurs['nom'] ?></strong> (<?= $nomRecurs['desc']?>)
                     <a target="_blank" href="<?= esc_url($nomRecurs['url']) ?>">>></a>
