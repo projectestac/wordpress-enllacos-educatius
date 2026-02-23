@@ -34,7 +34,7 @@ class XTEC_Widget extends WP_Widget {
         'atri' => ['nom' => 'ATRI', 'url' => 'https://atriportal.gencat.cat', 'img' => 'atri-icon.png', 'desc' => 'Portal ATRI'],
         'saga' => ['nom' => 'SAGA', 'url' => 'https://saga.xtec.cat/entrada', 'img' => 'saga-icon.png', 'desc' => 'Aplicatiu SAGA'],
         'familia-escola' => ['nom' => 'Familia i escola', 'url' => 'https://educacio.gencat.cat/ca/arees-actuacio/families/', 'img' => 'familiaescola-icon.png', 'desc' => 'Pàgina amb consells i recursos per les famílies'],
-        'internet-segura' => ['nom' => 'Internet Segura', 'url' => 'http://www.xtec.cat/web/recursos/tecinformacio/internet_segura', 'img' => 'internet-segura-icon.png', 'desc' => 'Recursos per utilitzar Internet de manera segura'],
+        'internet-segura' => ['nom' => 'Internet Segura', 'url' => 'https://xtec.gencat.cat/ca/recursos/internet_segura', 'img' => 'internet-segura-icon.png', 'desc' => 'Recursos per utilitzar Internet de manera segura'],
         'moodle' => ['nom' => 'MOODLE', 'url' => '', 'img' => 'moodle-icon.png', 'desc' => 'Enllaç al moodle del centre'],
         'portalcentre' => ['nom' => 'Portal de centre', 'url' => 'http://educacio.gencat.cat/portal/page/portal/EducacioIntranet/Benvinguda', 'img' => 'portalcentre-icon.png', 'desc' => 'Enllaç al portal de centre'],
         'epergam' => ['nom' => 'ePergam', 'url' => '', 'img' => 'epergam-icon.png', 'desc' => 'Aplicatiu de la biblioteca escolar'],
