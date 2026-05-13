@@ -24,20 +24,20 @@ class XTEC_Widget extends WP_Widget {
         'digital' => ['nom' => 'Digital', 'url' => 'https://projectes.xtec.cat/digital/', 'img' => 'pedc-icon.jpg', 'desc' => 'Digital'],
         'ateneu' => ['nom' => 'Ateneu', 'url' => 'https://ateneu.xtec.cat/', 'img' => 'ateneu-icon.png', 'desc' => 'Materials i recursos per la formació'],
         'alexandria' => ['nom' => 'Alexandria', 'url' => 'https://alexandria.xtec.cat', 'img' => 'alexandria-icon.png', 'desc' => 'Cursos moodle i activitats PDI per descarregar'],
-        'linkat' => ['nom' => 'Linkat', 'url' => 'http://linkat.xtec.cat/', 'img' => 'linkat-icon.png', 'desc' => 'Linux pels centres educatius'],
+        'linkat' => ['nom' => 'Linkat', 'url' => 'https://projectes.xtec.cat/linkat/', 'img' => 'linkat-icon.png', 'desc' => 'Linux pels centres educatius'],
         'jclic' => ['nom' => 'JClic', 'url' => 'https://projectes.xtec.cat/clic', 'img' => 'jclic-icon.png', 'desc' => 'Activitats jClic'],
         'merli' => ['nom' => 'Merlí', 'url' => 'http://merli.xtec.cat', 'img' => 'merli-icon.png', 'desc' => 'Catàleg de recursos XTEC'],
         'arc' => ['nom' => 'ARC', 'url' => 'https://apliense.xtec.cat/arc/', 'img' => 'arc-icon.png', 'desc' => 'Aplicació de recursos al Currículum'],
         'odissea' => ['nom' => 'Odissea', 'url' => 'https://odissea.xtec.cat', 'img' => 'odissea-icon.png', 'desc' => 'Entorn virtual de formació per a docents'],
         'ampa' => ['nom' => 'AMPA', 'url' => '', 'img' => 'ampa-icon.png', 'desc' => 'La associació de Pares d\'alumnes del centre'],
-        'escola-verda' => ['nom' => 'Escola verda', 'url' => 'https://mediambient.gencat.cat/ca/05_ambits_dactuacio/educacio_i_sostenibilitat/educacio_per_a_la_sostenibilitat/escoles_verdes', 'img' => 'escola-verda-icon.png', 'desc' => 'Escola verda'],
+        'escola-verda' => ['nom' => 'Escola verda', 'url' => 'https://xtec.gencat.cat/ca/projectes/escoles-verdes/', 'img' => 'escola-verda-icon.png', 'desc' => 'Escola verda'],
         'atri' => ['nom' => 'ATRI', 'url' => 'https://atriportal.gencat.cat', 'img' => 'atri-icon.png', 'desc' => 'Portal ATRI'],
         'saga' => ['nom' => 'SAGA', 'url' => 'https://saga.xtec.cat/entrada', 'img' => 'saga-icon.png', 'desc' => 'Aplicatiu SAGA'],
         'familia-escola' => ['nom' => 'Familia i escola', 'url' => 'https://educacio.gencat.cat/ca/arees-actuacio/families/', 'img' => 'familiaescola-icon.png', 'desc' => 'Pàgina amb consells i recursos per les famílies'],
         'internet-segura' => ['nom' => 'Internet Segura', 'url' => 'https://xtec.gencat.cat/ca/recursos/internet_segura', 'img' => 'internet-segura-icon.png', 'desc' => 'Recursos per utilitzar Internet de manera segura'],
         'moodle' => ['nom' => 'MOODLE', 'url' => '', 'img' => 'moodle-icon.png', 'desc' => 'Enllaç al moodle del centre'],
         'portalcentre' => ['nom' => 'Portal de centre', 'url' => 'http://educacio.gencat.cat/portal/page/portal/EducacioIntranet/Benvinguda', 'img' => 'portalcentre-icon.png', 'desc' => 'Enllaç al portal de centre'],
-        'epergam' => ['nom' => 'ePergam', 'url' => '', 'img' => 'epergam-icon.png', 'desc' => 'Aplicatiu de la biblioteca escolar'],
+        'biblio' => ['nom' => 'Catàleg de biblioteca', 'url' => '', 'img' => 'cataleg-biblio.png', 'desc' => 'Aplicatiu de la biblioteca escolar'],
         'lamevaxtec' => ['nom' => 'La meva XTEC', 'url' => 'https://xtec.gencat.cat/ca/at_usuari/lamevaxtec/', 'img' => 'lamevaxtec-icon.png', 'desc' => 'Enllaç a l\'espai d\'usuari XTEC'],
         'esfera' => ['nom' => 'Esfer@', 'url' => 'https://bfgh.aplicacions.ensenyament.gencat.cat/bfgh/', 'img' => 'esfera-icon.png', 'desc' => 'Enllaç al portal Esfer@'],
         'evalisa' => ['nom' => 'eValisa', 'url' => 'http://idpeacat.gencat.cat/group/1/valisa', 'img' => 'evalisa-icon.png', 'desc' => 'Enllaç al portal eValisa'],
@@ -48,10 +48,11 @@ class XTEC_Widget extends WP_Widget {
         'cesire' => ['nom' => 'CESIRE', 'url' => 'https://serveiseducatius.xtec.cat/cesire', 'img' => 'cesire-icon.png', 'desc' => 'Pàgina del CESIRE'],
     ];
 
+    // Elements with a fixed URL.
     public array $recursosXtec = [
         'ensenyament', 'xtec', 'edu365', 'nus', 'digital', 'ateneu', 'alexandria',
         'linkat', 'jclic', 'merli', 'arc', 'odissea', 'atri', 'saga', 'familia-escola',
-        'internet-segura', 'portalcentre', 'epergam', 'lamevaxtec', 'esfera', 'evalisa',
+        'internet-segura', 'portalcentre', 'lamevaxtec', 'esfera', 'evalisa',
         'ioc', 'sinapsi', 'cesire'
     ];
 
@@ -66,7 +67,6 @@ class XTEC_Widget extends WP_Widget {
 
         $this->recursos['moodle']['url'] = get_home_url() . '/moodle';
         $this->recursos['ampa']['url'] = get_home_url() . '/ampa';
-        $this->recursos['epergam']['url'] = 'https://aplicacions.gestioeducativa.gencat.cat/epergam/web/biblioteca.jsp?codi=' . SCHOOL_CODE;
 
     }
 
@@ -93,6 +93,10 @@ class XTEC_Widget extends WP_Widget {
 
         if ( isset($instance['serveiseducatius_url']) && trim($instance['serveiseducatius_url']) !== '' ) {
             $this->recursos['serveiseducatius']['url'] = $instance['serveiseducatius_url'];
+        }
+
+        if ( isset($instance['biblio_url']) && trim($instance['biblio_url']) !== '' ) {
+            $this->recursos['biblio']['url'] = $instance['biblio_url'];
         }
 
         if ( isset($instance['classroom_url']) && trim($instance['classroom_url']) !== '' ) {
@@ -131,6 +135,7 @@ class XTEC_Widget extends WP_Widget {
         $this->recursos['escola-verda']['url'] = $instance['escola-verda_url'] ?? 'https://www.gencat.cat/mediamb/escolesverdes/';
         $this->recursos['moodle']['url'] = $instance['moodle_url'] ?? get_home_url() . '/moodle';
         $this->recursos['serveiseducatius']['url'] = $instance['serveiseducatius_url'] ?? '';
+        $this->recursos['biblio']['url'] = $instance['biblio_url'] ?? '';
         $this->recursos['classroom']['url'] = $instance['classroom_url'] ?? 'https://classroom.google.com/';
 
         ?>
@@ -179,9 +184,10 @@ class XTEC_Widget extends WP_Widget {
         }
 
         $instance['ampa_url'] = (!empty($new_instance['ampa_url'])) ? sanitize_text_field($new_instance['ampa_url']) : get_home_url() . '/ampa';
-        $instance['escola-verda_url'] = (!empty($new_instance['escola-verda_url'])) ? sanitize_text_field($new_instance['escola-verda_url']) : 'https://www.gencat.cat/mediamb/escolesverdes/';
+        $instance['escola-verda_url'] = (!empty($new_instance['escola-verda_url'])) ? sanitize_text_field($new_instance['escola-verda_url']) : 'https://xtec.gencat.cat/ca/projectes/escoles-verdes/';
         $instance['moodle_url'] = (!empty($new_instance['moodle_url'])) ? sanitize_text_field($new_instance['moodle_url']) : get_home_url() . '/moodle';
         $instance['serveiseducatius_url'] = (!empty($new_instance['serveiseducatius_url'])) ? sanitize_text_field($new_instance['serveiseducatius_url']) : '';
+        $instance['biblio_url'] = (!empty($new_instance['biblio_url'])) ? sanitize_text_field($new_instance['biblio_url']) : '';
         $instance['classroom_url'] = (!empty($new_instance['classroom_url'])) ? sanitize_text_field($new_instance['classroom_url']) : 'https://classroom.google.com/';
 
         return $instance;
