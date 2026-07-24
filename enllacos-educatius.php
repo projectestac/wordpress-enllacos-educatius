@@ -29,7 +29,7 @@ class XTEC_Widget extends WP_Widget {
         'merli' => ['nom' => 'Merlí', 'url' => 'http://merli.xtec.cat', 'img' => 'merli-icon.png', 'desc' => 'Catàleg de recursos XTEC'],
         'arc' => ['nom' => 'ARC', 'url' => 'https://apliense.xtec.cat/arc/', 'img' => 'arc-icon.png', 'desc' => 'Aplicació de recursos al Currículum'],
         'odissea' => ['nom' => 'Odissea', 'url' => 'https://odissea.xtec.cat', 'img' => 'odissea-icon.png', 'desc' => 'Entorn virtual de formació per a docents'],
-        'ampa' => ['nom' => 'AMPA', 'url' => '', 'img' => 'ampa-icon.png', 'desc' => 'La associació de Pares d\'alumnes del centre'],
+        'ampa' => ['nom' => 'AFA', 'url' => '', 'img' => 'ampa-icon.png', 'desc' => 'La associació de Famílies d\'alumnes del centre'],
         'escola-verda' => ['nom' => 'Escola verda', 'url' => 'https://xtec.gencat.cat/ca/projectes/escoles-verdes/', 'img' => 'escola-verda-icon.png', 'desc' => 'Escola verda'],
         'atri' => ['nom' => 'ATRI', 'url' => 'https://atriportal.gencat.cat', 'img' => 'atri-icon.png', 'desc' => 'Portal ATRI'],
         'saga' => ['nom' => 'SAGA', 'url' => 'https://saga.xtec.cat/entrada', 'img' => 'saga-icon.png', 'desc' => 'Aplicatiu SAGA'],
